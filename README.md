@@ -5,11 +5,11 @@ Spark Streaming Application to detect DDOS Attack
 The customer runs a website and periodically is attacked by a botnet in a Distributed Denial of Service (DDOS) attack. You’ll be given a log file in Apache log format from a given attack. Use this log to build a simple real-time detector of DDOS attacks.
 
 # Requirements:
-1. Ingest
+1.Ingest
 
   Read a file from local disk and write to a message system such as Kafka.
 
-2. Detection
+2.Detection
 
   Write an application which reads messages from the message system and detects whether the attacker is part of the DDOS attack
 
