@@ -6,10 +6,15 @@ The customer runs a website and periodically is attacked by a botnet in a Distri
 
 # Requirements:
 1. Ingest
+
 Read a file from local disk and write to a message system such as Kafka.
+
 2. Detection
+
 Write an application which reads messages from the message system and detects whether the attacker is part of the DDOS attack
+
 Once an attacker is found, the ip-address should be written to a results directory which could be used for further processing
+
 An attack should be detected one to two minutes after starting
     
 # Solution:
