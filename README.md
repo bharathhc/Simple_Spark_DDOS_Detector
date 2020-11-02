@@ -59,4 +59,4 @@ The Spark Application reads the data from the Kafka Topic and uses Regular Expre
 
 # Simple Architecture
 
-![alt text](https://github.com/bharathhc/Simple_Spark_DDOS_Detector/blob/main/image.PNG)
+![alt text](https://github.com/bharathhc/Simple_Spark_DDOS_Detector/blob/main/architecture_image.PNG)
