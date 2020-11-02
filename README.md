@@ -55,3 +55,8 @@ OR run `python src/main/python/python_kafka_producer.py` to read the file and in
 
 
 The Spark Application reads the data from the Kafka Topic and uses Regular Expression to get host, timestamp, status code etc information and identifies the host sending more than threshold number of requests at a given instance of time and marks it as botnet attack.
+
+
+# Simple Architecture
+
+![alt text](https://github.com/bharathhc/Simple_Spark_DDOS_Detector/blob/main/image.PNG)
