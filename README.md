@@ -21,10 +21,22 @@ The customer runs a website and periodically is attacked by a botnet in a Distri
 
 Assuming at a given instance of time a botnet sends more than a threshold number of requests, all IP addresses sending more that threshold number of requests at an instance will be marked as suspicious botnet attack. Example - A machine 155.157.240.217 sends request at [25/May/2015:23:11:15 +0000] more than threshold number of times. This system will detect it as botnet attack.
 
+
+# Apache log message format
+
+`200.4.91.190 - - [25/May/2015:23:11:15 +0000] "GET / HTTP/1.0" 200 3557 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)"`
+For more information please read [apache log format](http://httpd.apache.org/docs/current/mod/mod_log_config.html)
+
+
+
 # Technologies Used:
+
 Spark 2.4.4
+
 Kafka 2.6.0
+
 Python 3.7
+
 
 # Steps:
 
@@ -42,7 +54,4 @@ OR run `python src/main/python/python_kafka_producer.py` to read the file and in
 5. Run the command `spark2-submit --master local[*] --jars kafka-clients-0.10.1.0.jar,spark-sql-kafka-0-10_2.11-2.4.4.jar stream_kafka_consumer.py`
 
 
-# Apache log message format
-
-`200.4.91.190 - - [25/May/2015:23:11:15 +0000] "GET / HTTP/1.0" 200 3557 "-" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)"`
-For more information please read [apache log format](http://httpd.apache.org/docs/current/mod/mod_log_config.html)
+The Spark Application reads the data from the Kafka Topic and uses Regular Expression to get host, timestamp, status code etc information and identifies the host sending more than threshold number of requests at a given instance of time and marks it as botnet attack.
