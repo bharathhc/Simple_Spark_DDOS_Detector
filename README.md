@@ -1,5 +1,5 @@
 # Simple_Spark_DDOS_Detector
-Spark Streaming Application to detect DDOS Attack
+A Simple Spark Streaming Application to detect DDOS Attack
 
 # Problem Statement:
 The customer runs a website and periodically is attacked by a botnet in a Distributed Denial of Service (DDOS) attack. You’ll be given a log file in Apache log format from a given attack. Use this log to build a simple real-time detector of DDOS attacks.
